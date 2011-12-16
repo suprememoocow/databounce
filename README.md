@@ -31,24 +31,25 @@ Using DataBounce
 
 * Instead of assigning `window.location.href` manually, use the DataBounce class, like so:
 
-    /* Get a buffer in the usual manner */
+    <pre><code>/* Get a buffer in the usual manner */
     var dataUrl = "data:application/pdf;base64," + Base64.encode(/* buffer */);        
     new DataBounce(dataUrl, { filename: "export.pdf" }).open();
+    </code></pre>
 
 * Add the servlet [DataBounceServlet.java](https://raw.github.com/suprememoocow/databounce/master/src/main/java/me/newdigate/databounce/DataBounceServlet.java) to your codebase.
 
 * Reference the servlet in your `web.xml`
 
-    <servlet>
-        <servlet-name>data-bounce</servlet-name>
-        <servlet-class>me.newdigate.databounce.DataBounceServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
+    <pre><code>&lt;servlet&gt;  
+        &lt;servlet-name&gt;data-bounce&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;me.newdigate.databounce.DataBounceServlet&lt;/servlet-class&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
 
-    <servlet-mapping>
-        <servlet-name>data-bounce</servlet-name>
-        <url-pattern>/dataBounce</url-pattern>
-    </servlet-mapping> 
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;data-bounce&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/dataBounce&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;</code></pre> 
     
 * That's it!    
     
