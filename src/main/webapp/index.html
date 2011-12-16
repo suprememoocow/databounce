@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Data URIs for Internet Explorer</title>
+    
+    <script type="text/javascript" src="jspdf/libs/base64.js"></script>
+    <script type="text/javascript" src="jspdf/libs/sprintf.js"></script>
+    <script type="text/javascript" src="jspdf/jspdf.js"></script>
+    
+    <script type="text/javascript" src="DataBounce.js"></script>
+    
+    <script type="text/javascript">
+    function demo1() {
+        var doc = new jsPDF();
+        doc.text(20, 20, 'Hello world!');
+        doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
+        doc.addPage();
+        doc.text(20, 20, 'Do you like that?');
+
+
+        // Output as Data URI
+        var buffer = doc.output();
+        
+        var dataUrl = 'data:application/pdf;base64,' + Base64.encode(buffer);
+        
+        new DataBounce(dataUrl, { filename: "demo.pdf" }).open();
+    }
+    </script>
+    
+</head>
+<body>
+<h2>Data URIs for Internet Explorer</h2>
+
+<a href="javascript:demo1()">Generate a PDF</a>
+
+</body>
+</html>
