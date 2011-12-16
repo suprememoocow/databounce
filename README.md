@@ -1,23 +1,23 @@
 DataBounce
 ==========
 
-p. data:urls are a useful browser feature which allows developers to generate content within a Javascript client without having to make a server side call. Javascript libraries exist for generating [PDFs](http://code.google.com/p/jspdf/), Excel spreadsheets and other data formats from within a browser without having to make a server http request.
+data:urls are a useful browser feature which allows developers to generate content within a Javascript client without having to make a server side call. Javascript libraries exist for generating [PDFs](http://code.google.com/p/jspdf/), Excel spreadsheets and other data formats from within a browser without having to make a server http request.
 
-p. data:urls are supported by all good modern browsers. Unfortunately they are only partially supported by Internet Explorer (surprise, surprise!). An elegant and commonly used workaround for IE is to use the [Downloadify](https://github.com/dcneiner/Downloadify) library, which delegates the download to a tiny Flash actionscript. This is the recommended approach if your clients have the Flash plugin installed. 
+data:urls are supported by all good modern browsers. Unfortunately they are only partially supported by Internet Explorer (surprise, surprise!). An elegant and commonly used workaround for IE is to use the [Downloadify](https://github.com/dcneiner/Downloadify) library, which delegates the download to a tiny Flash actionscript. This is the recommended approach if your clients have the Flash plugin installed. 
 
-p. Unfortunately sometimes it's impossible to guarantee that the Flash plugin will be available. Databounce is a extremely simply workaround for dealing with data:urls in these environments - and when you have control of the server environment (and can add servlets).
+Unfortunately sometimes it's impossible to guarantee that the Flash plugin will be available. Databounce is a extremely simply workaround for dealing with data:urls in these environments - and when you have control of the server environment (and can add servlets).
  
 Advantages
 ----------
 
-# Provides support for data: urls in Internet Explorer
-# No Flash plugin required
++ Provides support for data: urls in Internet Explorer
++ No Flash plugin required
 
 Disadvantages
 -------------
 
-# For IE clients, a server side round-trip call is required.
-# You need to install a servlet on your server.
++ For IE clients, a server side round-trip call is required.
++ You need to install a servlet on your server.
 
 How DataBounce works
 --------------------
